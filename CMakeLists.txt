@@ -9,13 +9,15 @@ include_directories(${SNINC})
 
 set(INC
     ${SNINC}/user.hpp
+    ${SNINC}/id.hpp
     #${SNINC}/distributer.hpp
     #${SNINC}/server.hpp
     )
 set(SRC
     ${SNSRC}/user.cpp
-    #${SNSRC}/distributer.cpp
+    ${SNSRC}/id.cpp
     ${SNSRC}/main.cpp
+    #${SNSRC}/distributer.cpp
     #${SNSRC}/server.cpp
     )
 

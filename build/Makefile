@@ -108,6 +108,30 @@ dmq/fast:
 	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/build
 .PHONY : dmq/fast
 
+src/id.o: src/id.cpp.o
+.PHONY : src/id.o
+
+# target to build an object file
+src/id.cpp.o:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/id.cpp.o
+.PHONY : src/id.cpp.o
+
+src/id.i: src/id.cpp.i
+.PHONY : src/id.i
+
+# target to preprocess a source file
+src/id.cpp.i:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/id.cpp.i
+.PHONY : src/id.cpp.i
+
+src/id.s: src/id.cpp.s
+.PHONY : src/id.s
+
+# target to generate assembly for a file
+src/id.cpp.s:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/id.cpp.s
+.PHONY : src/id.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -165,6 +189,9 @@ help:
 	@echo "... dmq"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/id.o"
+	@echo "... src/id.i"
+	@echo "... src/id.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

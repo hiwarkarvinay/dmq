@@ -6,9 +6,31 @@
 
 #IncludeRegexTransform: 
 
+../include/id.hpp
+cstdlib
+-
+set
+-
+climits
+-
+iostream
+-
+
 ../include/user.hpp
 iostream
 -
+cstring
+-
+string
+-
+string.h
+-
+queue
+-
+utility
+-
+id.hpp
+../include/id.hpp
 
 /home/vinay/dmq/src/main.cpp
 cstdio
