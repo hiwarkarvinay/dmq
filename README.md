@@ -1,4 +1,7 @@
-<<<<<<< .merge_file_JAkExc
+=======
+DMQ
+=======
+
 * Clone, Compile and Execute
 
 ```
@@ -7,7 +10,4 @@ $ cd dmq
 $ ./dmq.sh --build
 $ ./dmq.sh --run
 ```
-=======
-dmq
-===
->>>>>>> .merge_file_O2tUNb
+
