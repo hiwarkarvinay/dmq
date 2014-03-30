@@ -1,0 +1,35 @@
+usage.txt
+
+:Author: vinay
+:Email: vinay@vinay-cherry
+:Date: 2014-03-30 14:38
+
+
+NAME
+       dmq.sh - Manage Distributed Messaging Queue Project
+
+SYNOPSIS
+       dmq.sh [OPTION]... [ARG]...
+
+DESCRIPTION
+       dmq.sh builds, compiles DMQ project quickly.
+       Helps easy interface to project
+
+       -b, --build, build
+             Building Code with Source code.
+             Example. dmq.sh --build
+
+       -r, --run, run
+             Running Code 
+             Example. dmq.sh --run 
+
+       -s, --search, search
+             Search certain keyword in source code
+             Example. dmq.sh --search user 
+
+       -c, --count, count
+            Count no. of lines in source
+            Example. dmq.sh --count
+
+.. vim: expandtab filetype=rst shiftwidth=4 tabstop=4
+

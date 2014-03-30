@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/user.hpp
+iostream
+-
+
+/home/vinay/dmq/src/main.cpp
+cstdio
+-
+iostream
+-
+user.hpp
+/home/vinay/dmq/src/user.hpp
+
+/home/vinay/dmq/src/user.cpp
+user.hpp
+/home/vinay/dmq/src/user.hpp
+
