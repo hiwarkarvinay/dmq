@@ -1,20 +1,41 @@
 #include <cstdio>
 #include <iostream>
 #include "user.hpp"
+#include "server.hpp"
+#include "distributor.hpp"
 using namespace std;
 
 int main(int agrc, char **argv)
 {
     User u[10];
-
+    Server s[10];
+    Distributor d;
+    
     for(int i=0;i<10;++i)
     {
-        long long int id = u[i].getUserId();
-        cout<<"ID of user is : "<<id<<endl;
-        u[0].sendMsg("hi",id,id);
+        vector<long long int> dest;
+        for(int j=0;j<2;++j)
+            dest.push_back(u[rand()%10].getUserId());
+        u[i].sendMsg("Hello",u[i].getUserId(),dest);
+        if(i==2)
+            u[i].sendMsg("Hello",u[i].getUserId(),dest);
+
+        u[i].requestFromDistributor(dest,d);
     }
 
-    cout<<"Msg count : "<<u[0].getMsgCount();
+    for(int i=0;i<10;++i)  
+    {
+        cout<<"User : "<<u[i].getUserId()<<" sends to \n";
+        u[i].showDestIdList();
+        cout<<endl<<endl;
+    }
+
+    for(int i=0;i<10;++i)
+        cout<<"\nUser "<<i<<" has "<<u[i].getMsgCount()<<" msgs to send.\n";
+
+    d.showRequests();
+
+    
 
     return 0;
 }

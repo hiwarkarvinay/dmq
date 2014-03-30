@@ -115,11 +115,59 @@ CMakeFiles/dmq.dir/src/main.cpp.o.provides: CMakeFiles/dmq.dir/src/main.cpp.o.re
 
 CMakeFiles/dmq.dir/src/main.cpp.o.provides.build: CMakeFiles/dmq.dir/src/main.cpp.o
 
+CMakeFiles/dmq.dir/src/distributor.cpp.o: CMakeFiles/dmq.dir/flags.make
+CMakeFiles/dmq.dir/src/distributor.cpp.o: ../src/distributor.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vinay/dmq/build/CMakeFiles $(CMAKE_PROGRESS_4)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/dmq.dir/src/distributor.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dmq.dir/src/distributor.cpp.o -c /home/vinay/dmq/src/distributor.cpp
+
+CMakeFiles/dmq.dir/src/distributor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dmq.dir/src/distributor.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/vinay/dmq/src/distributor.cpp > CMakeFiles/dmq.dir/src/distributor.cpp.i
+
+CMakeFiles/dmq.dir/src/distributor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dmq.dir/src/distributor.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/vinay/dmq/src/distributor.cpp -o CMakeFiles/dmq.dir/src/distributor.cpp.s
+
+CMakeFiles/dmq.dir/src/distributor.cpp.o.requires:
+.PHONY : CMakeFiles/dmq.dir/src/distributor.cpp.o.requires
+
+CMakeFiles/dmq.dir/src/distributor.cpp.o.provides: CMakeFiles/dmq.dir/src/distributor.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/distributor.cpp.o.provides.build
+.PHONY : CMakeFiles/dmq.dir/src/distributor.cpp.o.provides
+
+CMakeFiles/dmq.dir/src/distributor.cpp.o.provides.build: CMakeFiles/dmq.dir/src/distributor.cpp.o
+
+CMakeFiles/dmq.dir/src/server.cpp.o: CMakeFiles/dmq.dir/flags.make
+CMakeFiles/dmq.dir/src/server.cpp.o: ../src/server.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/vinay/dmq/build/CMakeFiles $(CMAKE_PROGRESS_5)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/dmq.dir/src/server.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/dmq.dir/src/server.cpp.o -c /home/vinay/dmq/src/server.cpp
+
+CMakeFiles/dmq.dir/src/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/dmq.dir/src/server.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/vinay/dmq/src/server.cpp > CMakeFiles/dmq.dir/src/server.cpp.i
+
+CMakeFiles/dmq.dir/src/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/dmq.dir/src/server.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/vinay/dmq/src/server.cpp -o CMakeFiles/dmq.dir/src/server.cpp.s
+
+CMakeFiles/dmq.dir/src/server.cpp.o.requires:
+.PHONY : CMakeFiles/dmq.dir/src/server.cpp.o.requires
+
+CMakeFiles/dmq.dir/src/server.cpp.o.provides: CMakeFiles/dmq.dir/src/server.cpp.o.requires
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/server.cpp.o.provides.build
+.PHONY : CMakeFiles/dmq.dir/src/server.cpp.o.provides
+
+CMakeFiles/dmq.dir/src/server.cpp.o.provides.build: CMakeFiles/dmq.dir/src/server.cpp.o
+
 # Object files for target dmq
 dmq_OBJECTS = \
 "CMakeFiles/dmq.dir/src/user.cpp.o" \
 "CMakeFiles/dmq.dir/src/id.cpp.o" \
-"CMakeFiles/dmq.dir/src/main.cpp.o"
+"CMakeFiles/dmq.dir/src/main.cpp.o" \
+"CMakeFiles/dmq.dir/src/distributor.cpp.o" \
+"CMakeFiles/dmq.dir/src/server.cpp.o"
 
 # External object files for target dmq
 dmq_EXTERNAL_OBJECTS =
@@ -127,6 +175,8 @@ dmq_EXTERNAL_OBJECTS =
 dmq: CMakeFiles/dmq.dir/src/user.cpp.o
 dmq: CMakeFiles/dmq.dir/src/id.cpp.o
 dmq: CMakeFiles/dmq.dir/src/main.cpp.o
+dmq: CMakeFiles/dmq.dir/src/distributor.cpp.o
+dmq: CMakeFiles/dmq.dir/src/server.cpp.o
 dmq: CMakeFiles/dmq.dir/build.make
 dmq: CMakeFiles/dmq.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable dmq"
@@ -139,6 +189,8 @@ CMakeFiles/dmq.dir/build: dmq
 CMakeFiles/dmq.dir/requires: CMakeFiles/dmq.dir/src/user.cpp.o.requires
 CMakeFiles/dmq.dir/requires: CMakeFiles/dmq.dir/src/id.cpp.o.requires
 CMakeFiles/dmq.dir/requires: CMakeFiles/dmq.dir/src/main.cpp.o.requires
+CMakeFiles/dmq.dir/requires: CMakeFiles/dmq.dir/src/distributor.cpp.o.requires
+CMakeFiles/dmq.dir/requires: CMakeFiles/dmq.dir/src/server.cpp.o.requires
 .PHONY : CMakeFiles/dmq.dir/requires
 
 CMakeFiles/dmq.dir/clean:

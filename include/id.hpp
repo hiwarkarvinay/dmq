@@ -1,3 +1,6 @@
+#ifndef __ID_H_INCLUDED__
+#define __ID_H_INCLUDED__
+
 #include <cstdlib>
 #include <set>
 #include <climits>
@@ -13,3 +16,4 @@ class Id
         ~Id();
         static long long int generateId();
 };
+#endif

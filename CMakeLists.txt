@@ -10,15 +10,15 @@ include_directories(${SNINC})
 set(INC
     ${SNINC}/user.hpp
     ${SNINC}/id.hpp
-    #${SNINC}/distributer.hpp
-    #${SNINC}/server.hpp
+    ${SNINC}/distributor.hpp
+    ${SNINC}/server.hpp
     )
 set(SRC
     ${SNSRC}/user.cpp
     ${SNSRC}/id.cpp
     ${SNSRC}/main.cpp
-    #${SNSRC}/distributer.cpp
-    #${SNSRC}/server.cpp
+    ${SNSRC}/distributor.cpp
+    ${SNSRC}/server.cpp
     )
 
 add_executable(dmq ${SRC} ${INC})

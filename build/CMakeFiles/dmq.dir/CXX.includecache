@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+../include/distributor.hpp
+iostream
+-
+cstring
+-
+string
+-
+string.h
+-
+queue
+-
+utility
+-
+id.hpp
+../include/id.hpp
+distributor.hpp
+../include/distributor.hpp
+vector
+-
+map
+-
+
 ../include/id.hpp
 cstdlib
 -
@@ -14,6 +36,24 @@ set
 climits
 -
 iostream
+-
+
+../include/server.hpp
+iostream
+-
+cstring
+-
+string
+-
+string.h
+-
+queue
+-
+utility
+-
+id.hpp
+../include/id.hpp
+vector
 -
 
 ../include/user.hpp
@@ -31,6 +71,18 @@ utility
 -
 id.hpp
 ../include/id.hpp
+distributor.hpp
+../include/distributor.hpp
+vector
+-
+
+/home/vinay/dmq/src/distributor.cpp
+distributor.hpp
+/home/vinay/dmq/src/distributor.hpp
+
+/home/vinay/dmq/src/id.cpp
+id.hpp
+/home/vinay/dmq/src/id.hpp
 
 /home/vinay/dmq/src/main.cpp
 cstdio
@@ -39,6 +91,14 @@ iostream
 -
 user.hpp
 /home/vinay/dmq/src/user.hpp
+server.hpp
+/home/vinay/dmq/src/server.hpp
+distributor.hpp
+/home/vinay/dmq/src/distributor.hpp
+
+/home/vinay/dmq/src/server.cpp
+server.hpp
+/home/vinay/dmq/src/server.hpp
 
 /home/vinay/dmq/src/user.cpp
 user.hpp

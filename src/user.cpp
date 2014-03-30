@@ -20,7 +20,20 @@ int User::getMsgCount()
     return msg_queue.size();
 }
 
-void User::sendMsg(string msg,long long int src_id,long long int dest_id)
+void User::showDestIdList()
 {
-    msg_queue.push(make_pair(msg,dest_id));
+    for(int i=0;i<msg_queue.front().second.second.size();++i)
+        cout<<"Dest ID : "<<msg_queue.front().second.second[i]<<endl;
+}
+
+void User::sendMsg(string msg,long long int src_id,vector<long long int> &dest_id)
+{
+//    for(int i=0;i<dest_id.size();++i)
+        msg_queue.push(make_pair(msg,make_pair(src_id,dest_id)));
+}
+
+void User::requestFromDistributor(vector<long long int> &dest_id,Distributor &dist)
+{
+    for(int i=0;i<dest_id.size();++i)
+        dist.enqueuerequest(dest_id[i]);    
 }

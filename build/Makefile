@@ -108,6 +108,30 @@ dmq/fast:
 	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/build
 .PHONY : dmq/fast
 
+src/distributor.o: src/distributor.cpp.o
+.PHONY : src/distributor.o
+
+# target to build an object file
+src/distributor.cpp.o:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/distributor.cpp.o
+.PHONY : src/distributor.cpp.o
+
+src/distributor.i: src/distributor.cpp.i
+.PHONY : src/distributor.i
+
+# target to preprocess a source file
+src/distributor.cpp.i:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/distributor.cpp.i
+.PHONY : src/distributor.cpp.i
+
+src/distributor.s: src/distributor.cpp.s
+.PHONY : src/distributor.s
+
+# target to generate assembly for a file
+src/distributor.cpp.s:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/distributor.cpp.s
+.PHONY : src/distributor.cpp.s
+
 src/id.o: src/id.cpp.o
 .PHONY : src/id.o
 
@@ -156,6 +180,30 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/server.o: src/server.cpp.o
+.PHONY : src/server.o
+
+# target to build an object file
+src/server.cpp.o:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/server.cpp.o
+.PHONY : src/server.cpp.o
+
+src/server.i: src/server.cpp.i
+.PHONY : src/server.i
+
+# target to preprocess a source file
+src/server.cpp.i:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/server.cpp.i
+.PHONY : src/server.cpp.i
+
+src/server.s: src/server.cpp.s
+.PHONY : src/server.s
+
+# target to generate assembly for a file
+src/server.cpp.s:
+	$(MAKE) -f CMakeFiles/dmq.dir/build.make CMakeFiles/dmq.dir/src/server.cpp.s
+.PHONY : src/server.cpp.s
+
 src/user.o: src/user.cpp.o
 .PHONY : src/user.o
 
@@ -189,12 +237,18 @@ help:
 	@echo "... dmq"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... src/distributor.o"
+	@echo "... src/distributor.i"
+	@echo "... src/distributor.s"
 	@echo "... src/id.o"
 	@echo "... src/id.i"
 	@echo "... src/id.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/server.o"
+	@echo "... src/server.i"
+	@echo "... src/server.s"
 	@echo "... src/user.o"
 	@echo "... src/user.i"
 	@echo "... src/user.s"
