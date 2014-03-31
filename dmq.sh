@@ -2,7 +2,7 @@
 
 ##### constants
 FILENAME="dmq.sh"
-TITLE="Distributed Messaging Queue v0.1"
+TITLE="Snooker Player Profile Manager v0.1"
 
 #### functions
 function build
@@ -16,60 +16,78 @@ function build
 
 function run
 {
-    build/dmq
+	if [ -z "$1" -o -z "$2" ]
+	then
+		echo "Error: Specify number of users and number of servers as input."
+		echo "Try dmq.sh --help"
+		exit
+	fi
+	#if [ ! -f "$1" ]
+	#then
+	#	echo "File \"$1\" does not exist."
+	#	echo "Try dmq.sh --help"
+	#	exit
+	#fi
+	build/dmq $1 $2
 }
 
 function search
 {
+	if [ -z "$1" ]
+	then
+		echo "Error: Missing input argument."
+		exit
+	fi
 	find . -iregex '.*\.\(cpp\|sql\|hpp\)' -exec grep -inH $1 {} \;
 }
 
 function count
 {
-	find . -iregex '.*\.\(cpp\|sql\|hpp\)' -exec cat {} \; | wc -l
+	find . -iregex '.*\.\(cpp\|sql\|hpp\|sh\)' -exec cat {} \; | wc -l
+}
+
+function db
+{
+	sqlite3 --interactive -echo database/snooker.db -separator "| "
 }
 
 function usage
 {
 	echo $TITLE
+	if [ ! -f "doc/usage.txt" ]
+	then
+		echo "Error: doc/usage.txt missing."
+		exit
+	fi
 	cat doc/usage.txt
 }
 
 function dmq_main
 {
-	# TODO: Replace with better parsing
-	# https://gist.github.com/jehiah/855086
-	if [ -n "$1" ]
-	then
-		if [ $1 = "-b" -o $1 = "--build" -o $1 = "build" ];
-		then
+	case $1 in
+		-b | --build | build)
 			build
-		elif [ $1 = "-r" -o $1 = "--run" -o $1 = "run" ];
-		then
-			#if [ -n "$2" ]
-			#then
-            run
-			#else
-			#	echo "Error: Missing input argument."
-			#	usage
-			# fi
-		elif [ $1 = "-s" -o $1 = "--search" -o $1 = "search" ];
-		then
-			search $2
-		elif [ $1 = "-c" -o $1 = "--count" -o $1 = "count" ];
-		then
-			count
-		elif [ $1 = "-h" -o $1 = "--help" -o $1 = "help" ];
-		then
-			usage
-		else
-			echo "Error:Invalid input option."
-			echo "Try: dmq.sh --help"
-		fi
-	else
-		echo "Error: Missing input option."
-		echo "Try: dmq.sh --help"
-	fi
+			;;
+		-r | --run | run)
+			run $2 $3
+			;;
+		-s | --search | search)
+            search $2
+			;;
+		-c | --count | count)
+		    count
+			;;
+		-db | --database | database)
+		    db
+			;;
+		-h | --help | help)
+		    usage
+			;;
+		*)
+			echo "Error: Invalid input option."
+			echo "Try dmq.sh --help"
+			;;
+	esac
 }
 
 #### Main

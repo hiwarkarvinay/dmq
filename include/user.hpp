@@ -15,6 +15,7 @@ class User
     private:
         long long int id;
         queue<pair<string, pair<long long int,vector<long long int> > > > msg_queue;
+        static vector<User*> user_list;
     public:
         User();
         ~User();
@@ -23,5 +24,6 @@ class User
         void sendMsg(string msg,long long int src_id,vector<long long int> &dest_id);
         void requestFromDistributor(vector<long long int> &dest_id,Distributor &dist);
         void showDestIdList();
+        static vector<User*>& getUserList();
 };
 #endif

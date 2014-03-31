@@ -33,11 +33,17 @@ long long int Distributor::distributorLookup(long long int dest_id)
     map<long long int,long long int>::iterator lookup_itr;
     lookup_itr=lookup.find(dest_id);
     if(lookup_itr!=lookup.end()) {
-        cout<<"Found Link at Distributor\n";
+        cout<<"Found Link at Distributor Cache\n";
+        ++Distributor::distributor_served_count;
         return lookup_itr->second;
     }
     else
-        return(Server::searchLink(dest_id));
+    {
+        long long int link = Server::searchLink(dest_id);
+        lookup[dest_id] = link;
+        ++Distributor::server_served_count;
+        return(link);
+    }
 }
 
 long long int Distributor::getDestId(int i)
@@ -67,3 +73,7 @@ void Distributor::enqueuerequest(long long int dest_id)
 {
     request_queue.push_back(dest_id);   
 }
+
+int Distributor::distributor_served_count=0;
+int Distributor::server_served_count=0;
+

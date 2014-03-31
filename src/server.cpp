@@ -1,9 +1,15 @@
 #include "server.hpp"
-
+#include "user.hpp"
 Server::Server()
 {
     id = Id::generateId(); 
     server_list.push_back(this);
+	vector<User*>& user_list=User::getUserList();
+	
+	User* ptr = user_list[0];
+
+    for(int i=0;i<user_list.size();++i)
+        lookup[(ptr+i)->getUserId()] = rand()%LLONG_MAX;
 }
 
 Server::~Server()
@@ -31,6 +37,7 @@ void Server::listServers()
     cout<<endl;
     for(int i=0;i<server_list.size();++i) 
         cout<<"Server "<<i<<" has ID : "<<server_list[i]->id<<endl;
+    cout<<endl<<endl;;
 }
 
 long long int Server::searchLink(long long int dest_id)

@@ -3,6 +3,7 @@
 User::User()
 {
    id = Id::generateId(); 
+   user_list.push_back(this);
 }
 
 User::~User()
@@ -37,3 +38,9 @@ void User::requestFromDistributor(vector<long long int> &dest_id,Distributor &di
     for(int i=0;i<dest_id.size();++i)
         dist.enqueuerequest(dest_id[i]);    
 }
+vector<User*>& User::getUserList()
+{
+    return User::user_list;
+}
+
+vector<User*> User::user_list;

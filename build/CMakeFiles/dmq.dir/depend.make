@@ -15,8 +15,10 @@ CMakeFiles/dmq.dir/src/main.cpp.o: ../include/server.hpp
 CMakeFiles/dmq.dir/src/main.cpp.o: ../include/user.hpp
 CMakeFiles/dmq.dir/src/main.cpp.o: ../src/main.cpp
 
+CMakeFiles/dmq.dir/src/server.cpp.o: ../include/distributor.hpp
 CMakeFiles/dmq.dir/src/server.cpp.o: ../include/id.hpp
 CMakeFiles/dmq.dir/src/server.cpp.o: ../include/server.hpp
+CMakeFiles/dmq.dir/src/server.cpp.o: ../include/user.hpp
 CMakeFiles/dmq.dir/src/server.cpp.o: ../src/server.cpp
 
 CMakeFiles/dmq.dir/src/user.cpp.o: ../include/distributor.hpp
