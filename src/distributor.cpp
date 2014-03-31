@@ -29,15 +29,15 @@ void Distributor::showRequests()
 long long int Distributor::distributorLookup(long long int dest_id)
 {
     
-    lookup[1189641421] = 2014;
+    lookup[1189641421] = LLONG_MAX;
     map<long long int,long long int>::iterator lookup_itr;
     lookup_itr=lookup.find(dest_id);
     if(lookup_itr!=lookup.end()) {
-//        cout<<"Found";
+        cout<<"Found Link at Distributor\n";
         return lookup_itr->second;
     }
     else
-        return -1;
+        return(Server::searchLink(dest_id));
 }
 
 long long int Distributor::getDestId(int i)
@@ -46,6 +46,7 @@ long long int Distributor::getDestId(int i)
     long long int dest_id = request_queue[request_queue.size()-i-1];
 //    request_queue.pop_back();
   //  ++i;
+    
     return(dest_id);
 }
 

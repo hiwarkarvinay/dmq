@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
-../include/distributor.hpp
+../include/id.hpp
+cstdlib
+-
+set
+-
+climits
+-
+iostream
+-
+
+../include/server.hpp
 iostream
 -
 cstring
@@ -21,24 +31,12 @@ utility
 -
 id.hpp
 ../include/id.hpp
-distributor.hpp
-../include/distributor.hpp
-vector
--
 map
 -
-
-../include/id.hpp
-cstdlib
--
-set
--
-climits
--
-iostream
+vector
 -
 
-/home/vinay/dmq/src/distributor.cpp
-distributor.hpp
-/home/vinay/dmq/src/distributor.hpp
+/home/vinay/dmq/src/server.cpp
+server.hpp
+/home/vinay/dmq/src/server.hpp
 

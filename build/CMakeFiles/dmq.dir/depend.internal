@@ -4,6 +4,7 @@
 CMakeFiles/dmq.dir/src/distributor.cpp.o
  ../include/distributor.hpp
  ../include/id.hpp
+ ../include/server.hpp
  /home/vinay/dmq/src/distributor.cpp
 CMakeFiles/dmq.dir/src/id.cpp.o
  ../include/id.hpp
@@ -21,5 +22,6 @@ CMakeFiles/dmq.dir/src/server.cpp.o
 CMakeFiles/dmq.dir/src/user.cpp.o
  ../include/distributor.hpp
  ../include/id.hpp
+ ../include/server.hpp
  ../include/user.hpp
  /home/vinay/dmq/src/user.cpp

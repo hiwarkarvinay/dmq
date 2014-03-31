@@ -6,10 +6,11 @@
 #include <string.h>
 #include <queue>
 #include <utility>
-#include "id.hpp"
-#include "distributor.hpp"
 #include <vector>
 #include <map>
+#include "id.hpp"
+#include "distributor.hpp"
+#include "server.hpp"
 using namespace std;
 class Distributor
 {

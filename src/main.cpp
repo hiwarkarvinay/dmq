@@ -14,7 +14,7 @@ int main(int agrc, char **argv)
     for(int i=0;i<10;++i)
     {
         vector<long long int> dest;
-        for(int j=0;j<2;++j)
+        for(int j=0;j<rand()%11;++j)
             dest.push_back(u[rand()%10].getUserId());
         u[i].sendMsg("Hello",u[i].getUserId(),dest);
         if(i==2)
@@ -36,10 +36,12 @@ int main(int agrc, char **argv)
     d.showRequests();
 
     int queue_size = d.getRequestCount();
-    cout<<"Queue size : "<<queue_size<<endl;
+    cout<<"\nQueue size of distributor : "<<queue_size<<endl;
     cout<<endl;
     for(int i=0;i<queue_size;++i) 
-        cout<<"Out-going Link for destination "<<d.getDestId(i)<<" is : "<<d.distributorLookup(d.getDestId(i))<<endl;
+        cout<<"Out-going Link for destination "<<d.getDestId(i)<<" is : "<<d.distributorLookup(d.getDestId(i))<<endl<<endl;
+    
+    Server::listServers();
 
     return 0;
 }
