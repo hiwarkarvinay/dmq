@@ -35,7 +35,10 @@ int main(int agrc, char **argv)
 
     d.showRequests();
 
-    
+    int queue_size = d.getRequestCount();
+    cout<<endl;
+    for(int i=0;i<queue_size;++i) 
+        cout<<"Out-going Link for desstination "<<d.getDestId()<<" is : "<<d.distributorLookup(d.getDestId())<<endl;
 
     return 0;
 }

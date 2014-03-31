@@ -15,7 +15,7 @@ long long int Distributor::getDistributorId()
     return id;
 }
 
-int Distributor::getMsgCount()
+int Distributor::getRequestCount()
 {
     return request_queue.size();
 }
@@ -24,6 +24,29 @@ void Distributor::showRequests()
 {
     for(int i=0;i<request_queue.size();++i)
         cout<<"Requested Link for Destination : "<<request_queue[i]<<endl;
+}
+
+long long int Distributor::distributorLookup(long long int dest_id)
+{
+    
+    lookup[1189641421] = 2014;
+    map<long long int,long long int>::iterator lookup_itr;
+    lookup_itr=lookup.find(dest_id);
+    if(lookup_itr!=lookup.end()) {
+//        cout<<"Found";
+        return lookup_itr->second;
+    }
+    else
+        return -1;
+}
+
+long long int Distributor::getDestId()
+{
+    static int i=1;
+    long long int dest_id = request_queue[request_queue.size()-i];
+//    request_queue.pop_back();
+    ++i;
+    return(dest_id);
 }
 
 /*void Distributor::showDestLink()
