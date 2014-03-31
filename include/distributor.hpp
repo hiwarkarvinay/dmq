@@ -30,7 +30,7 @@ class Distributor
         void enqueuerequest(long long int);
         void showRequests();
         long long int distributorLookup(long long int dest_id);
-        long long int getDestId();
+        long long int getDestId(int i);
         //void sendMsg(string msg,long long int src_id,vector<long long int> &dest_id);
         //void showDestLink();
 };

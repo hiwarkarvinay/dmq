@@ -40,12 +40,12 @@ long long int Distributor::distributorLookup(long long int dest_id)
         return -1;
 }
 
-long long int Distributor::getDestId()
+long long int Distributor::getDestId(int i)
 {
-    static int i=1;
-    long long int dest_id = request_queue[request_queue.size()-i];
+//    static int i=1;
+    long long int dest_id = request_queue[request_queue.size()-i-1];
 //    request_queue.pop_back();
-    ++i;
+  //  ++i;
     return(dest_id);
 }
 
