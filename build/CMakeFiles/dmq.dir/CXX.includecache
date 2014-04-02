@@ -84,10 +84,6 @@ vector
 distributor.hpp
 /home/vinay/dmq/src/distributor.hpp
 
-/home/vinay/dmq/src/id.cpp
-id.hpp
-/home/vinay/dmq/src/id.hpp
-
 /home/vinay/dmq/src/main.cpp
 cstdio
 -

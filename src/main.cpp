@@ -10,7 +10,8 @@ int main(int agrc, char **argv)
 {
     const int user_sz = atoi(argv[1]);
     const int server_sz = atoi(argv[2]);
-
+    Distributor::cache_size = atoi(argv[3]);
+    
     User u[user_sz];
     Server s[server_sz];
     

@@ -28,7 +28,7 @@ function run
 	#	echo "Try dmq.sh --help"
 	#	exit
 	#fi
-	build/dmq $1 $2
+	build/dmq $1 $2 $3
 }
 
 function search
@@ -69,7 +69,7 @@ function dmq_main
 			build
 			;;
 		-r | --run | run)
-			run $2 $3
+			run $2 $3 $4
 			;;
 		-s | --search | search)
             search $2

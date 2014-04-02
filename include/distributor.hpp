@@ -33,6 +33,7 @@ class Distributor
         long long int getDestId(int i);
         static int distributor_served_count;
         static int server_served_count;
+        static int cache_size;
         //void sendMsg(string msg,long long int src_id,vector<long long int> &dest_id);
         //void showDestLink();
 };

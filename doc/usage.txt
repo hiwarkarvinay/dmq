@@ -21,7 +21,7 @@ DESCRIPTION
 
        -r, --run, run
              Running Code 
-             Example. dmq.sh --run no_of_users no_of_servers
+             Example. dmq.sh --run no_of_users no_of_servers distributor_cache_size
 
        -s, --search, search
              Search certain keyword in source code

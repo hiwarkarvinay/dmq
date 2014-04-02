@@ -29,7 +29,6 @@ void Distributor::showRequests()
 long long int Distributor::distributorLookup(long long int dest_id)
 {
     
-    lookup[1189641421] = LLONG_MAX;
     map<long long int,long long int>::iterator lookup_itr;
     lookup_itr=lookup.find(dest_id);
     if(lookup_itr!=lookup.end()) {
@@ -40,7 +39,12 @@ long long int Distributor::distributorLookup(long long int dest_id)
     else
     {
         long long int link = Server::searchLink(dest_id);
-        lookup[dest_id] = link;
+        if(lookup.size()<=Distributor::cache_size || Distributor::cache_size==-1)
+            lookup[dest_id] = link;
+        else {
+            lookup.erase(lookup.begin());
+            lookup[dest_id] = link;
+        }
         ++Distributor::server_served_count;
         return(link);
     }
@@ -76,4 +80,4 @@ void Distributor::enqueuerequest(long long int dest_id)
 
 int Distributor::distributor_served_count=0;
 int Distributor::server_served_count=0;
-
+int Distributor::cache_size;
